@@ -89,10 +89,10 @@ NB: DILARANG menggunakan built-in function PHP seperti strrev() dll. Gunakan loo
 // Code function di sini
 function palindrome($Kata){
     $hasilBalik = reverse($Kata);
-    if (strcmp(strtolower($Kata), strtolower($hasilBalik)) == 0) {
-        echo "true <br>";
+    if (strtolower($Kata) == strtolower($hasilBalik)) {
+        echo "$Kata => true <br>";
     }else {
-        echo "false <br>";
+        echo "$Kata => false <br>";
     }
     
 }
