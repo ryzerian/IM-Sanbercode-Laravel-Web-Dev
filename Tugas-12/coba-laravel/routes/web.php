@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -18,4 +19,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/register', [AuthController::class, 'signup']);
 Route::post('/welcome', [AuthController::class, 'authenticate']);
-
+Route::get('/table', function(){
+    return view('pages.table');
+});
+Route::get('/data-table', function(){
+    return view('pages.data-table');
+});
