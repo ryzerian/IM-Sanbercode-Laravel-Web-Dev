@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CastController;
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\GenreController;
+use App\Models\Genre;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,3 +41,10 @@ Route::get('/cast/{cast_id}', [CastController::class, 'show']); //read
 Route::get('/cast/{cast_id}/edit', [CastController::class, 'edit']); //update
 Route::put('/cast/{cast_id}', [CastController::class, 'update']); //update
 Route::delete('/cast/{cast_id}', [CastController::class, 'destroy']); //delete
+
+//CRUD Genre
+route::resource('genre', GenreController::class);
+
+
+//CRUD Film
+route::resource('film', FilmController::class);
